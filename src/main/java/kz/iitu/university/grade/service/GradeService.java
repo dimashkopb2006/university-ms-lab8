@@ -17,9 +17,9 @@ import java.util.List;
 @Service
 public class GradeService {
 
-    private final GradeRepository gradeRepository;   // grade_db
-    private final StudentService studentService;     // student_db
-    private final CourseService courseService;       // course_db
+    private final GradeRepository gradeRepository;
+    private final StudentService studentService;
+    private final CourseService courseService;
 
     public GradeService(GradeRepository gradeRepository,
                         StudentService studentService,
@@ -31,7 +31,6 @@ public class GradeService {
 
     @Transactional(transactionManager = "gradeTransactionManager")
     public Grade assign(Grade grade) {
-        // No foreign keys between databases -> check manually (throws 404 if missing)
         studentService.getById(grade.getStudentId());
         courseService.getById(grade.getCourseId());
 
@@ -46,7 +45,6 @@ public class GradeService {
         return gradeRepository.findByStudentId(studentId);
     }
 
-    // Combines student_db + grade_db + course_db
     public StudentTranscriptDto getTranscript(Long studentId) {
         Student student = studentService.getById(studentId);
         List<Grade> grades = gradeRepository.findByStudentId(studentId);

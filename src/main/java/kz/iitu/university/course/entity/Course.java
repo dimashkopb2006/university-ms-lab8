@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "courses")   // course_db
+@Table(name = "courses")
 public class Course {
 
     @Id

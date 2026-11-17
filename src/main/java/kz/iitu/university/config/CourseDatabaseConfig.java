@@ -14,7 +14,6 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
 
-// Everything for course_db: DataSource -> EntityManagerFactory -> TransactionManager
 @Configuration
 @EnableJpaRepositories(
         basePackages = "kz.iitu.university.course.repository",

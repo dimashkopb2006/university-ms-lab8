@@ -2,7 +2,6 @@ package kz.iitu.university.dto;
 
 import java.util.List;
 
-// Data from all three databases in one response
 public record StudentTranscriptDto(
         Long studentId,
         String studentName,

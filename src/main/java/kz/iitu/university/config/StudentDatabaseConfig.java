@@ -15,7 +15,6 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
 
-// Everything for student_db: DataSource -> EntityManagerFactory -> TransactionManager
 @Configuration
 @EnableJpaRepositories(
         basePackages = "kz.iitu.university.student.repository",

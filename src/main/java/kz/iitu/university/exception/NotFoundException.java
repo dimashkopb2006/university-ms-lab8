@@ -1,5 +1,5 @@
 package kz.iitu.university.exception;
 
-public class NotFoundException extends RuntimeException {      // -> 404
+public class NotFoundException extends RuntimeException {
     public NotFoundException(String message) { super(message); }
 }

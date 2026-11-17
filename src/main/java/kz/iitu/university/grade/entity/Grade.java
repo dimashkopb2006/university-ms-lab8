@@ -8,14 +8,14 @@ import jakarta.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "grades")   // grade_db
+@Table(name = "grades")
 public class Grade {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Logical references to other databases (NOT foreign keys)
+
     @NotNull
     @Column(name = "student_id", nullable = false)
     private Long studentId;
@@ -30,7 +30,6 @@ public class Grade {
     @Column(name = "score", nullable = false)
     private Integer score;
 
-    // Filled by GradeService, not by the client
     @Column(name = "letter_grade")
     private String letterGrade;
 
